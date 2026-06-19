@@ -13,13 +13,12 @@ export default async function Home() {
 
   const totalCourses = courses?.length || 0;
 
-  const avgProgress =
-    totalCourses > 0
-      ? Math.round(
-          courses.reduce((sum, c) => sum + c.progress, 0) /
-            totalCourses
-        )
-      : 0;
+ const avgProgress =
+  totalCourses > 0 && courses
+    ? Math.round(
+        courses.reduce((sum, c) => sum + c.progress, 0) / totalCourses
+      )
+    : 0;
 
   return (
     <main className="min-h-screen bg-gradient-to-br from-[#070B14] via-[#0D1324] to-[#151B32] text-white">
