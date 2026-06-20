@@ -13,10 +13,13 @@ export default async function Home() {
 
   const totalCourses = courses?.length || 0;
 
- const avgProgress =
-  totalCourses > 0 && courses
+ const safeCourses = courses ?? [];
+
+const avgProgress =
+  safeCourses.length > 0
     ? Math.round(
-        courses.reduce((sum, c) => sum + c.progress, 0) / totalCourses
+        safeCourses.reduce((sum, c) => sum + c.progress, 0) /
+        safeCourses.length
       )
     : 0;
 

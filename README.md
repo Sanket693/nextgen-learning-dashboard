@@ -47,4 +47,8 @@ npm install
 3. Run project
 npm run dev
 4. Open browser
+<<<<<<< HEAD
 http://localhost:3000
+=======
+http://localhost:3000
+>>>>>>> 98e2de899ca3b13914471f79ebfb0adfbe00aa7a
